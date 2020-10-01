@@ -1,0 +1,29 @@
+<div class="container">
+  <div
+    class="box-center mx-auto mt-5 p-5"
+    style="width: 50%; box-shadow: 8px 6px 16px 0px rgba(130, 130, 130, 0.75)"
+  >
+    <h2 class="text-center mb-5">Typing Challenge</h2>
+    <div class="genText">
+      <h5>
+        <span
+          *ngFor="let char of genText.split(''); let i = index"
+          [class]="getColor(char, i)"
+          >{{ char }}</span
+        >
+      </h5>
+    </div>
+    <div class="refresh">
+      <button class="btn btn-primary mb-5" (click)="onRefresh()">
+        Refresh
+      </button>
+    </div>
+    <input
+      type="text"
+      class="form-control my-3"
+      (input)="onInput($event.target.value)"
+      [class]="inputText == genText ? 'gBorder' : ''"
+    />
+    <h3 style="color: green" *ngIf="inputText == genText">Good job!</h3>
+  </div>
+</div>

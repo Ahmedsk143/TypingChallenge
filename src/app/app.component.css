@@ -1,0 +1,20 @@
+.refresh {
+  text-align: end;
+}
+.genText {
+  height: 68px;
+  text-align: center;
+}
+.gBorder {
+  border: 1.5px solid green;
+}
+
+.pendding {
+  color: black;
+}
+.correct {
+  color: green;
+}
+.incorrect {
+  color: red;
+}
